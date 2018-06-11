@@ -1,17 +1,22 @@
 
 <script>
+import axios from 'axios'
+
     export default {
         mounted() {
             let app = this;
-            let id = app.$route.params.id;
-            app.companyId = id;
-            axios.get('/api/v1/companies/' + id)
-                .then(function (resp) {
-                    app.company = resp.data;
-                })
-                .catch(function () {
-                    alert("Could not load your company")
-                });
+
+            if (app.$route) {
+                let id = app.$route.params.id;
+                app.companyId = id;
+                axios.get('/api/v1/companies/' + id)
+                    .then(function (resp) {
+                        app.company = resp.data;
+                    })
+                    .catch(function () {
+                        alert("Could not load your company")
+                    });
+            }
         },
         data: function () {
             return {
