@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Helpers\TextFormatHelper;
 
 class FormatController extends Controller
 {
@@ -16,6 +17,6 @@ class FormatController extends Controller
     {
         $text = $request->input('text');
 
-        return ucwords($text);
+        return TextFormatHelper::toTitleCase($text);
     }
 }
