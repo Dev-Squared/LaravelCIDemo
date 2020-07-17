@@ -20,7 +20,7 @@
         "jest": "^23.1.0",
         "jquery": "^3.5",
         "laravel-mix": "^2.0",
-        "lodash": "^4.17.13",
+        "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "vue": "^2.5.7",
         "vue-jest": "^2.6.0"
